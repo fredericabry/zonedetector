@@ -3,11 +3,12 @@
 
 #include <QMainWindow>
 #include "qlabel.h"
-
+#include "qthread.h"
 
 
 
 class mask_c;
+class Diff_c;
 class camera_c;
 class sharedCom;
 
@@ -28,7 +29,6 @@ public:
     int y;
     int size;
 public slots:
-    void show2(void);
     void hide2(void);
 
 };
@@ -54,7 +54,7 @@ public:
     QLabel *getLabel(void);
     ~MainWindow();
     void keyPressEvent(QKeyEvent* e);
-    QLabel *lbl_imageDiff;
+    Diff_c *lbl_imageDiff;
     Mask *lbl_imageSnap;
     std::vector<std::vector<mark*> > markers;
     int resolution,threshold,thresholdZone,exposition;
@@ -62,33 +62,33 @@ public:
     void setUpMarkers(void);
     void clearMarkers(void);
     QString imageFileName;
+    int getExposition(void);
+
+
 private:
     Ui::MainWindow *ui;
     camera_c *cam;
-    int width,height;
+    QThread *camThread;
     sharedCom *com;
     void saveParameters();
     void loadParameters();
     void prepZoneFile(QStringList cmdline_args);
-    bool initialStart;
+    void getParams(void);
     bool autoLearnStatus;
 
+
 private slots:
-    void dataAvailable(int);
     void setMarkerVisible(unsigned int x,unsigned int y,bool status);
     void clearDetected(void);
     void restart(void);
     void init(void);
     void updateDisplay(bool show);
-    void setSize(int w, int h);
-    void snapAndSave(void);
     void reset(void);
     void autoLearn(void);
-
+    void setEnabledRadio(bool status);
 
 signals:
     void snap(void)    ;
-    void acknowledgeData(void);
     void testCom(char);
     void reload(void);
 

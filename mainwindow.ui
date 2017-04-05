@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1824</width>
-    <height>1072</height>
+    <width>800</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>1650</x>
-      <y>880</y>
+      <y>530</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -33,11 +33,17 @@
    <widget class="QPushButton" name="bSelect">
     <property name="geometry">
      <rect>
-      <x>1480</x>
-      <y>880</y>
-      <width>161</width>
-      <height>41</height>
+      <x>440</x>
+      <y>350</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Select All</string>
@@ -49,11 +55,17 @@
    <widget class="QPushButton" name="bUnselect">
     <property name="geometry">
      <rect>
-      <x>1310</x>
-      <y>880</y>
-      <width>161</width>
-      <height>41</height>
+      <x>440</x>
+      <y>400</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Unselect All</string>
@@ -65,11 +77,17 @@
    <widget class="QPushButton" name="bRestart">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>880</y>
-      <width>161</width>
-      <height>41</height>
+      <x>340</x>
+      <y>400</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>restart</string>
@@ -81,11 +99,17 @@
    <widget class="QSpinBox" name="spinRes">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>820</y>
+      <x>340</x>
+      <y>310</y>
       <width>91</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="minimum">
      <number>1</number>
@@ -100,11 +124,17 @@
    <widget class="QSpinBox" name="spinThresholdZone">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>820</y>
+      <x>440</x>
+      <y>310</y>
       <width>91</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="minimum">
      <number>1</number>
@@ -119,11 +149,17 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>780</y>
+      <x>340</x>
+      <y>290</y>
       <width>101</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Resolution</string>
@@ -132,11 +168,17 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>770</y>
-      <width>111</width>
-      <height>41</height>
+      <x>440</x>
+      <y>275</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Threshold
@@ -146,11 +188,17 @@ zone</string>
    <widget class="QPushButton" name="bShutdown">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>880</y>
-      <width>161</width>
-      <height>41</height>
+      <x>20</x>
+      <y>400</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Shutdown</string>
@@ -162,11 +210,17 @@ zone</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>1440</x>
-      <y>780</y>
-      <width>111</width>
-      <height>31</height>
+      <x>540</x>
+      <y>290</y>
+      <width>91</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Threshold</string>
@@ -175,11 +229,17 @@ zone</string>
    <widget class="QSpinBox" name="spinThreshold">
     <property name="geometry">
      <rect>
-      <x>1440</x>
-      <y>820</y>
+      <x>540</x>
+      <y>310</y>
       <width>91</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="minimum">
      <number>1</number>
@@ -194,11 +254,17 @@ zone</string>
    <widget class="QSpinBox" name="spinExposition">
     <property name="geometry">
      <rect>
-      <x>1600</x>
-      <y>820</y>
+      <x>650</x>
+      <y>310</y>
       <width>91</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="minimum">
      <number>1</number>
@@ -213,11 +279,17 @@ zone</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>1600</x>
-      <y>780</y>
-      <width>111</width>
-      <height>31</height>
+      <x>650</x>
+      <y>290</y>
+      <width>91</width>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Exposition</string>
@@ -226,11 +298,17 @@ zone</string>
    <widget class="QPushButton" name="bSave">
     <property name="geometry">
      <rect>
-      <x>1310</x>
-      <y>930</y>
-      <width>161</width>
-      <height>41</height>
+      <x>540</x>
+      <y>350</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>save zones</string>
@@ -242,11 +320,17 @@ zone</string>
    <widget class="QPushButton" name="bLoad">
     <property name="geometry">
      <rect>
-      <x>1480</x>
-      <y>930</y>
-      <width>161</width>
-      <height>41</height>
+      <x>540</x>
+      <y>400</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>load zones</string>
@@ -258,11 +342,17 @@ zone</string>
    <widget class="QRadioButton" name="radioDisplay">
     <property name="geometry">
      <rect>
-      <x>970</x>
-      <y>890</y>
+      <x>20</x>
+      <y>350</y>
       <width>151</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Display</string>
@@ -274,11 +364,17 @@ zone</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>990</x>
-      <y>780</y>
-      <width>101</width>
+      <x>220</x>
+      <y>290</y>
+      <width>41</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Height</string>
@@ -287,17 +383,26 @@ zone</string>
    <widget class="QSpinBox" name="spinHeight">
     <property name="geometry">
      <rect>
-      <x>990</x>
-      <y>820</y>
+      <x>220</x>
+      <y>310</y>
       <width>91</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="minimum">
      <number>1</number>
     </property>
     <property name="maximum">
      <number>2048</number>
+    </property>
+    <property name="singleStep">
+     <number>10</number>
     </property>
     <property name="value">
      <number>240</number>
@@ -306,17 +411,26 @@ zone</string>
    <widget class="QSpinBox" name="spinWidth">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>820</y>
+      <x>110</x>
+      <y>310</y>
       <width>91</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="minimum">
      <number>1</number>
     </property>
     <property name="maximum">
      <number>2048</number>
+    </property>
+    <property name="singleStep">
+     <number>10</number>
     </property>
     <property name="value">
      <number>320</number>
@@ -325,11 +439,17 @@ zone</string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>780</y>
-      <width>101</width>
-      <height>17</height>
+      <x>110</x>
+      <y>290</y>
+      <width>51</width>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Width</string>
@@ -338,11 +458,17 @@ zone</string>
    <widget class="QPushButton" name="bSnap">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>810</y>
-      <width>161</width>
-      <height>41</height>
+      <x>110</x>
+      <y>400</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>snap</string>
@@ -354,11 +480,17 @@ zone</string>
    <widget class="QRadioButton" name="radioEnabled">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>890</y>
+      <x>20</x>
+      <y>370</y>
       <width>117</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>enabled</string>
@@ -370,11 +502,17 @@ zone</string>
    <widget class="QPushButton" name="bAutoLearn">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>960</y>
-      <width>161</width>
-      <height>41</height>
+      <x>230</x>
+      <y>400</y>
+      <width>90</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>6</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>start</string>
@@ -386,36 +524,23 @@ zone</string>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>910</x>
-      <y>940</y>
+      <x>240</x>
+      <y>380</y>
       <width>101</width>
       <height>17</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <italic>true</italic>
+     </font>
     </property>
     <property name="text">
      <string>Auto learn</string>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1824</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

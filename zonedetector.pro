@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = test
+TARGET = zonedetector
 TEMPLATE = app
 
 
@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     camera_c.cpp \
     util.cpp \
     mask_c.cpp \
-    sharedcom.cpp
+    sharedcom.cpp \
+    diff_c.cpp
 
 
 INCLUDEPATH += /usr/local/include/
@@ -25,7 +26,8 @@ HEADERS  += mainwindow.h \
     camera_c.h \
     util.h \
     mask_c.h \
-    sharedcom.h
+    sharedcom.h \
+    diff_c.h
 
 
 
@@ -33,15 +35,15 @@ FORMS    += mainwindow.ui
 
 
 
-target.path = /home/pi/qt5/test
+target.path = /home/pi/qt5/zonedetector
 INSTALLS += target
 
 
 
-LIBS += -L$$PWD/../../raspi/opencv-3.2.0/build/lib/ -lopencv_core
-LIBS += -L$$PWD/../../raspi/opencv-3.2.0/build/lib/ -lopencv_imgproc
-LIBS += -L$$PWD/../../raspi/opencv-3.2.0/build/lib/ -lopencv_imgcodecs
-LIBS += -L$$PWD/../../raspi/opencv-3.2.0/build/lib/ -lopencv_videoio
+LIBS += -L$$PWD/../../raspi3/opencv/build/lib/ -lopencv_core
+LIBS += -L$$PWD/../../raspi3/opencv/build/lib/ -lopencv_imgproc
+LIBS += -L$$PWD/../../raspi3/opencv/build/lib/ -lopencv_imgcodecs
+LIBS += -L$$PWD/../../raspi3/opencv/build/lib/ -lopencv_videoio
 
 
 LIBS += -lv4l2

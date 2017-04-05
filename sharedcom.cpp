@@ -18,12 +18,17 @@ sharedCom::sharedCom(QObject *parent):parent(parent)
 
 void sharedCom::run()
 {
+
+
     watchTimer = new QTimer;
     watchTimer->start(200);
     connect(watchTimer,SIGNAL(timeout()),this,SLOT(watchData()));
 
     // give your shared memory an id, anything will do
     key_t keyIn = 111222;
+
+
+
     key_t keyOut = 111333;
     key_t keyData = 111444;
 
@@ -120,17 +125,21 @@ void sharedCom::sendData(char data)
     memcpy(dataMemory,&bufData, sizeof(char));
     sem_post(semOut);
 
+
 }
 
 
 void sharedCom::watchData(void)
 {
 
+
     sem_wait(semIn);
     memcpy(&bufIn,inMemory,sizeof(char));
 
     if(bufIn!=0)
     {
+
+
         switch(bufIn)
         {
         case msgPing:sendMsg(msgPong);break;

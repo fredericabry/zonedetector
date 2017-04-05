@@ -14,15 +14,16 @@ class Mask:public QLabel
     Q_OBJECT
 public:
     int resolution;
-    explicit Mask(QWidget* parent=0, int resolution=10 , bool loadFile=false);
-    void setImg(QImage);
+    explicit Mask(QWidget* parent=0, int resolution=10 );
+    ~Mask(void);
+
     void redraw(void);
     void resetDetection(void);
     void markUndetected(int x,int y);
     void markDetected(int x,int y);
     int click_x,click_y;
     double dx,dy;
-    bool loadFile;
+
 
     std::vector<std::vector<bool> > markedZone;
   //  std::vector<std::vector<bool> > detectedZone;
@@ -35,6 +36,9 @@ protected:
 signals:
 
     void setRes(int);
+
+public slots:
+    void setImg(QImage);
 
 private slots:
     void selectAllZones();

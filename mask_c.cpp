@@ -11,9 +11,12 @@
 
 
 
-Mask::Mask(QWidget *parent, int res,bool loadFile) : QLabel(parent),resolution(res),loadFile(loadFile)
+Mask::Mask(QWidget *parent, int res) : QLabel(parent),resolution(res)
 {
     markedZone.resize( res ,std::vector<bool>( res , false ) );
+    setAttribute(Qt::WA_DeleteOnClose,true);
+    loadZones();
+
 }
 
 void Mask::mouseReleaseEvent(QMouseEvent *event)
@@ -109,8 +112,6 @@ void Mask::selectAllZones(void)
     redraw();
 }
 
-
-
 void Mask::selectZone(std::vector<std::vector<bool>> Zone)
 {
 
@@ -128,12 +129,6 @@ void Mask::selectZone(std::vector<std::vector<bool>> Zone)
 }
 
 
-
-
-
-
-
-
 void Mask::unselectAllZones(void)
 {
     for (int xi = 0;xi<resolution;xi++)
@@ -149,21 +144,21 @@ void Mask::unselectAllZones(void)
 void Mask::setImg(QImage img)
 {
 
-    image = img.copy();
-
-    if(loadFile)
-    loadZones();
-
-
+    QImage img2 = img.scaled(width(),height(),Qt::KeepAspectRatio);
+    image = img2.copy();
     redraw();
+
+
 }
 
 void Mask::saveZones(void)
 {
     QFile file(((MainWindow*)parent())->zoneFileName);
+
+
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
-        qDebug()<<"cannot open zones file";
+        qDebug()<<"cannot open zones file "+((MainWindow*)parent())->zoneFileName;
         return;
     }
 
@@ -193,7 +188,7 @@ void Mask::loadZones(void)
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug()<<"cannot open zones file";
+        qDebug()<<"cannot open zones file"+((MainWindow*)parent())->zoneFileName;
         return;
     }
 
@@ -243,8 +238,6 @@ void Mask::redraw()
     dy = ((double)height()/resolution);
     dx = ((double)width()/resolution);
 
-    // qDebug()<<"dx redraw "<<dx;
-
     for (int i = 1;i<= resolution;i++)
     {
         QLineF line(rect.topLeft().x(), rect.topLeft().y()+dy*i,rect.topRight().x(), rect.topRight().y()+dy*i);
@@ -269,16 +262,18 @@ void Mask::redraw()
 
 }
 
-
-
-
 bool Mask::isZoneMarked(int x, int y)
 {
-    if((x>=resolution)|| (y>=resolution))
-    {
-        qDebug()<<"is zonemarked bug";
+    if((x>=markedZone.size())|| (y>=markedZone[0].size()))
+    {       
         return false;
     }
     return markedZone[x][y];
 }
 
+
+Mask::~Mask(void)
+{
+    qDebug()<<"mask destroyed";
+
+}
